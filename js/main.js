@@ -1,11 +1,4 @@
-localStorage.clear();
-
-
 
 
 
 draw()
-
-
-
-
