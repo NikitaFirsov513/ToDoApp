@@ -89,6 +89,9 @@
     font-weight: 500;
     line-height: normal;
     margin-left: 13px;
+
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 .todo__list-checkmark {
@@ -116,6 +119,7 @@
 .todo__list-elem--dis>.todo__list-checkmark div {
     background-color: var(--back-dis-color);
 }
+
 .todo__list-elem--dis>.todo__list-checkmark {
     border: 1px solid var(--text-dis-color);
 }
