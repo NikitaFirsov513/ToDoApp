@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <div class="todo">
+            <div class="todo__header">
+                <h1>To Do List</h1>
+            </div>
+            <div class="todo__list">
+
+                <label class="todo__list-elem">
+                    <input checked type="checkbox" />
+                    <span class="todo__list-checkmark">
+                        <div></div>
+                    </span>
+                    <p> Element B
+                    </p>
+                    <button class="todo__list-delate">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame">
+                                <path id="Vector"
+                                    d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"
+                                    fill="#FF0000" fill-opacity="0.5" />
+                            </g>
+                        </svg>
+                    </button>
+                </label>
+
+                <label class="todo__list-elem">
+                    <input type="checkbox" />
+                    <span class="todo__list-checkmark">
+                        <div></div>
+                    </span>
+                    <p> Element B
+                    </p>
+                    <button class="todo__list-delate">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame">
+                                <path id="Vector"
+                                    d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"
+                                    fill="#FF0000" fill-opacity="0.5" />
+                            </g>
+                        </svg>
+                    </button>
+                </label>
+
+            </div>
+
+        </div>
+        <form id="myForm" class="add">
+            <input id="myInput" type="text" placeholder="enter">
+        </form>
+        <div class="buttons">
+            <button onclick="evenClick()">
+                <div class="line-solid"></div>
+                <div class="line-medium"></div>
+                <div class="line-solid"></div>
+                <div class="line-medium"></div>
+            </button>
+            <button onclick="oddClick()">
+                <div class="line-medium"></div>
+                <div class="line-solid"></div>
+                <div class="line-medium"></div>
+                <div class="line-solid"></div>
+            </button>
+            <button onclick="deleteLastAndDraw()">
+                <div class="line-solid"></div>
+                <div class="line-solid"></div>
+                <div class="line-solid"></div>
+                <div class="line-red"></div>
+            </button>
+            <button onclick="deleteFirstAndDraw()">
+                <div class="line-red"></div>
+                <div class="line-solid"></div>
+                <div class="line-solid"></div>
+                <div class="line-solid"></div>
+            </button>
+        </div>
+
+    </div>
+
+
+</body>
+<script src="js/toDoMethods.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/handlers.js"></script>
+
+
+<script src="js/main.js"></script>
+
+</html>

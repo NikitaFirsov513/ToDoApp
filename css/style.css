@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+:root {
+
+    --back-color: #9462D3;
+    --text-color: #000000;
+    --sub-text-color: rgba(0, 0, 0, 0.50);
+    --back-dis-color: rgba(148, 98, 211, 0.50);
+    --text-dis-color: rgba(0, 0, 0, 0.50);
+
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+
+    background-color: var(--back-color);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+}
+
+.todo {
+    width: 486px;
+    height: 536px;
+
+
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.todo h1 {
+    color: #000;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin: 35px 0 0 25px;
+
+
+}
+
+.todo__list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0 43px 0 68px;
+    max-height: 420px;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    overflow-y: auto;
+
+}
+
+.todo__list-elem input {
+    height: 0;
+    width: 0;
+}
+
+.todo__list-elem {
+    cursor: pointer;
+    display: flex;
+
+}
+
+.todo__list-elem p {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 13px;
+}
+
+.todo__list-checkmark {
+
+    display: block;
+
+    border: 2px solid #c9c9c9;
+    background-color: #ffffff;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    border: 1px solid #000000;
+}
+
+.todo__list-checkmark div {
+    transform: translate(-50%, -50%);
+    margin: 9px 0 0 9px;
+    transition: all 0.3s ease;
+    width: 0px;
+    height: 0px;
+    border-radius: 10px;
+    background-color: var(--back-color);
+}
+
+.todo__list-elem--dis>.todo__list-checkmark div {
+    background-color: var(--back-dis-color);
+}
+.todo__list-elem--dis>.todo__list-checkmark {
+    border: 1px solid var(--text-dis-color);
+}
+
+.todo__list-elem:hover input~.todo__list-checkmark {}
+
+.todo__list-elem:hover input~.todo__list-checkmark {}
+
+.todo__list-elem:hover .todo__list-delate {
+    opacity: 1;
+}
+
+.todo__list-elem input:checked~.todo__list-checkmark div {
+    width: 15px;
+    height: 15px;
+}
+
+.todo__list-elem .todo__list-checkmark:after {
+    top: -5px;
+    width: 5px;
+    height: 10px;
+    left: 2px;
+    color: white;
+}
+
+.todo__list-elem--dis {
+    padding-left: 30px;
+}
+
+.todo__list-elem--dis p {
+    color: var(--text-dis-color);
+}
+
+.todo__list-delate {
+    position: absolute;
+    margin-left: 350px;
+    outline: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.todo__list-elem--dis>.todo__list-delate {
+    margin-left: 320px;
+}
+
+.add {
+    width: 486px;
+    height: 56px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.add input {
+    margin: 0 20px;
+    width: 100%;
+    color: rgba(0, 0, 0, 1);
+
+    text-align: justify;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    border: none;
+    outline: none;
+}
+
+.add input::placeholder {
+
+    color: rgba(0, 0, 0, 0.50);
+    text-align: justify;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+.buttons {
+    display: flex;
+    width: 486px;
+
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button {
+
+
+
+    border-radius: 15px;
+    border: none;
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+
+}
+
+.line-solid {
+    width: 28px;
+    height: 3px;
+    background: #777777;
+}
+
+.line-medium {
+    width: 28px;
+    height: 3px;
+    background: #D9D9D9;
+}
+
+.line-red {
+    width: 28px;
+    height: 3px;
+    background: rgba(255, 0, 0, 0.50);
+}
+
+.buttons button:active {
+    transform: translateY(2px);
+}
